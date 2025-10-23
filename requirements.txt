@@ -1,0 +1,31 @@
+# Core Framework
+langgraph>=0.2.0
+langchain>=0.1.0
+
+# AI/ML Models
+openai-whisper
+google-generativeai
+vanna[all]
+
+# Database
+sqlalchemy
+pymysql
+cryptography
+
+# Web Framework
+flask
+python-dotenv
+
+# PDF Generation
+reportlab
+
+# Data Processing
+pandas
+plotly
+kaleido
+
+# Audio Processing
+pyttsx3
+
+# Email
+smtplib-ssl

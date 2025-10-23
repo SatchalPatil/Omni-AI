@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniAI - AI Assistant</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <!-- Plotly.js for interactive charts (Phase 2) -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h1>🤖 OmniAI Assistant</h1>
+                    <p>Your AI-powered automation workspace</p>
+                </div>
+                <a href="/dashboard" style="color: white; text-decoration: none; padding: 10px 20px; background: rgba(255,255,255,0.2); border-radius: 8px; transition: all 0.3s; display: flex; align-items: center; gap: 8px;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                    <span>📊</span>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Message Area -->
+        <div class="message-area" id="messageArea">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        
+        <!-- Input Area -->
+        <div class="input-area">
+            <button class="btn" id="micButton" title="Voice input">🎤</button>
+            <button class="btn" id="uploadButton" title="Upload document">📎</button>
+            <input 
+                type="file" 
+                id="fileInput" 
+                accept=".pdf,.docx,.txt,.doc"
+                style="display: none;"
+            />
+            <input 
+                type="text" 
+                class="input-box" 
+                id="messageInput" 
+                placeholder="Type your message or use voice input..."
+                autocomplete="off"
+            />
+            <button class="btn" id="sendButton" title="Send message">📤</button>
+        </div>
+    </div>
+    
+    <!-- JavaScript Modules - Load in correct order -->
+    <!-- 1. Utilities -->
+    <script src="/static/js/chat/chatUtils.js"></script>
+    
+    <!-- 2. UI Module -->
+    <script src="/static/js/chat/chatUI.js"></script>
+    
+    <!-- 3. Audio Module -->
+    <script src="/static/js/chat/chatAudio.js"></script>
+    
+    <!-- 4. Email Module (Phase 3) -->
+    <script src="/static/js/chat/chatEmail.js"></script>
+    
+    <!-- 5. Report Module (Phase 4) -->
+    <script src="/static/js/chat/chatReport.js"></script>
+    
+    <!-- 6. Upload Module (Document Upload) -->
+    <script src="/static/js/chat/chatUpload.js"></script>
+    
+    <!-- 7. Core Module -->
+    <script src="/static/js/chat/chatCore.js"></script>
+    
+    <!-- 8. Main Initialization -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
